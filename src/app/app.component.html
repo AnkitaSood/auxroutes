@@ -1,15 +1,22 @@
 <h1>{{title}}</h1>
 <nav>
+    <!-- If aux route is already loaded, it doesn't clear it - just redirects to the dashboard-->
     <a routerLink="/dashboard">Dashboard</a>
+
+    <!--This leverages the redirect strategy to clear the aux route. There is no way to clear the route programmatically -->
+    <!-- <a routerLink="">Dashboard</a>-->
     <a routerLink="/heroes">Heroes</a>
 </nav>
 <main>
     <router-outlet></router-outlet>
 </main>
-<!-- View details of selected -->
-<aside>
-    <router-outlet name="details"></router-outlet>
-</aside>
 
-<!-- Chat Placeholder. Will always be open even when user is navigating to other routes -->
-<router-outlet name="chat"></router-outlet>
+<!-- View details of selected -->
+<section>
+    <router-outlet name="details"></router-outlet>
+</section>
+
+<aside>
+    <!-- Chat Placeholder. Will always be open even when user is navigating to other routes -->
+    <router-outlet name="chat"></router-outlet>
+</aside>

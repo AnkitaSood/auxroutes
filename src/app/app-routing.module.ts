@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'detail/:id', component: HeroDetailComponent },
   { path: 'heroes', component: HeroesComponent },
   {
-    path: 'super-powers/:name',
+    path: 'super-powers/:id',
     outlet: 'details',
     component: SuperPowersComponent
   },

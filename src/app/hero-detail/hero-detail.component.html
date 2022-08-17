@@ -7,7 +7,7 @@
   </div>
 
 <div>
-  <button type="button" [routerLink]="['/', { outlets: { details : ['super-powers', hero.name] } }]" >Show Super Powers</button>
+  <button type="button" [routerLink]="['/', { outlets: { details : ['super-powers', hero.id] } }]" >Show Super Powers</button>
   <button type="button" [routerLink]="['/', { outlets: { details : null } }]" >Hide Super Powers</button>
 </div>
   <button type="button" (click)="goBack()">go back</button>
