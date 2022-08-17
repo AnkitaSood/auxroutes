@@ -12,10 +12,17 @@ const routes: Routes = [
   { path: 'detail/:id', component: HeroDetailComponent },
   { path: 'heroes', component: HeroesComponent },
   {
-    path: 'show-super-powers/:name',
-    outlet: 'powers',
+    path: 'super-powers/:name',
+    outlet: 'details',
     component: SuperPowersComponent
   },
+
+/*  The same outlet could be used with path/ component combo.
+    {
+    path: 'mortal-enemies/:name',
+    outlet: 'details',
+    component: MortalEnemyComponent
+  },*/
 ];
 
 @NgModule({
